@@ -2,13 +2,14 @@ from gpiozero import LED
 
 
 
+# Get leds
+lights = {
+    "yellow": LED(4),
+    "green": LED(14),
+    "red": LED(15),
+}
+
 def toggle_light(ref):
-    # Get leds
-    lights = {
-        "yellow": LED(4),
-        "green": LED(14),
-        "red": LED(15),
-    }
 
     # If not string, throw error
     if (type(ref) != type('')):
