@@ -26,9 +26,9 @@ def toggle_light(ref):
         ref = "red"
 
     # Light on/off & Change Status
-    if lights[ref].status:
-        lights[ref].led.off()
-        lights[ref].status = False
+    if lights[ref]["status"]:
+        lights[ref]["led"].off()
+        lights[ref]["status"] = False
     else:
-        lights[ref].led.on()
-        lights[ref].status = True
+        lights[ref]["led"].on()
+        lights[ref]["status"] = True
