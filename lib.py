@@ -16,24 +16,19 @@ def toggle_light(ref):
         return print("[ERR] String expected!")
 
     # Yellow led
-    if ref in ["yellow", "amarelo"]:
-        # print("yellow", lights["yellow"])
+    if ref in ["y", "yellow", "amarelo"]:
         ref = "yellow"
 
     # Green led
-    elif ref in ["green", "verde"]:
-        # print("green", lights["green"])
+    elif ref in ["g", "green", "verde"]:
         ref = "green"
 
     # Red led
-    elif ref in ["red", "vermelho"]:
-        # print("red", lights["red"])
+    elif ref in ["r", "red", "vermelho"]:
         ref = "red"
 
     # Light on/off & Change Status
     if lights[ref].is_active:
-        # print("off")
         lights[ref].off()
     else:
-        # print("on")
         lights[ref].on()
