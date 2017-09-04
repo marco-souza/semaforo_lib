@@ -4,13 +4,20 @@ from gpiozero import LED
 
 def toggle_light(ref):
     # Get leds
-    lights = {}
-    lights["yellow"].led = LED(4)
-    lights["yellow"].status = False
-    lights["green"].led = LED(14)
-    lights["green"].status = False
-    lights["red"].led = LED(15)
-    lights["red"].status = False
+    lights = {
+        "yellow": {
+            "led": LED(4),
+            "status": False
+        },
+        "green": {
+            "led": LED(14),
+            "status": False
+        },
+        "red": {
+            "led": LED(15),
+            "status": False
+        },
+    }
 
     # If not string, throw error
     if (type(ref) != type('')):
@@ -32,9 +39,10 @@ def toggle_light(ref):
         ref = "red"
 
     # Light on/off & Change Status
-    if lights[ref].status:
-        lights[ref].led.off()
-        lights[ref].status = False
+    led = lights[ref]["led"]
+    if lights[ref]["status"]:
+        led.off()
+        led = lights[ref]["status"] = False
     else:
-        lights[ref].led.on()
-        lights[ref].status = True
+        led.on()
+        led = lights[ref]["status"] = True
