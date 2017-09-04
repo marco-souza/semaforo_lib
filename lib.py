@@ -6,7 +6,7 @@ from gpiozero import LED
 lights = {
     "yellow": LED(15),
     "green": LED(14),
-    "red": LED(14),
+    "red": LED(4),
 }
 
 def toggle_light(ref):
