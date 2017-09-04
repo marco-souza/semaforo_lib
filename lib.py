@@ -31,6 +31,8 @@ def toggle_light(ref):
 
     # Light on/off & Change Status
     if lights[ref].is_active:
+        print("off")
         lights[ref].off()
     else:
+        print("on")
         lights[ref].on()
