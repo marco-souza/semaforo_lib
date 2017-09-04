@@ -17,23 +17,23 @@ def toggle_light(ref):
 
     # Yellow led
     if ref in ["yellow", "amarelo"]:
-        print("yellow", lights["yellow"])
+        # print("yellow", lights["yellow"])
         ref = "yellow"
 
     # Green led
     elif ref in ["green", "verde"]:
-        print("green", lights["green"])
+        # print("green", lights["green"])
         ref = "green"
 
     # Red led
     elif ref in ["red", "vermelho"]:
-        print("red", lights["red"])
+        # print("red", lights["red"])
         ref = "red"
 
     # Light on/off & Change Status
     if lights[ref].is_active:
-        print("off")
+        # print("off")
         lights[ref].off()
     else:
-        print("on")
+        # print("on")
         lights[ref].on()
