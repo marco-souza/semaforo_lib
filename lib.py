@@ -4,8 +4,8 @@ from gpiozero import LED
 
 # Get leds
 lights = {
-    "yellow": LED(4),
-    "green": LED(15),
+    "yellow": LED(15),
+    "green": LED(14),
     "red": LED(14),
 }
 
